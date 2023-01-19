@@ -1,3 +1,4 @@
+// Function to calculate the year.
 function calculateYear() {
     var inputValue = parseInt(document.getElementById("input-txt").value);
     let year = new Date().getFullYear();
@@ -18,4 +19,18 @@ function calculateYear() {
         fullYear = Number(yr + inputValue);
         document.getElementById("output-txt").value = fullYear;
     }
+}
+
+
+// Function to generate the array of multiples
+function generateArrayMultiples() {
+    var num = parseInt(document.getElementById("input-num").value);
+    var len = parseInt(document.getElementById("input-length").value);
+    var arrMultiply = [];
+
+    for (var i=1; i<=len; i++) {
+        var multiply = num * i;
+        arrMultiply.push(multiply);
+    }
+    document.getElementById("output-txt").value = "[ "+ arrMultiply +" ]";
 }

@@ -35,8 +35,25 @@
   border-radius: 5px;
   width: 45%;
   height: 50px;
+  text-align: Center;
+  font-size: 24px;
+}
+#input-num {
+  border-radius: 5px;
+  width: 20%;
+  height: 50px;
   text-align: center;
   font-size: 24px;
+}
+#input-length {
+  border-radius: 5px;
+  width: 20%;
+  height: 50px;
+  text-align: center;
+  font-size: 24px;
+}
+#label-right {
+  padding: 9px;
 }
 #output-txt {
   border-radius: 5px;
