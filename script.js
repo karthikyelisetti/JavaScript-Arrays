@@ -1,6 +1,6 @@
-// Function to calculate the year.
+// Q1: Function to calculate the year.
 function calculateYear() {
-    var inputValue = parseInt(document.getElementById("input-txt").value);
+    let inputValue = parseInt(document.getElementById("input-txt").value);
     let year = new Date().getFullYear();
     let yr = year.toString().substring(0, 2); // fetching the first 2 digits of the 2000s year
     let fullYear;
@@ -11,26 +11,49 @@ function calculateYear() {
         document.getElementById("output-txt").value = '';
     } 
     else if (inputValue >= 10 && inputValue < 35) { // 2000 year range logic        
+        // Concatinatig the first 2 digits of the year with the input value
         fullYear = Number(yr + inputValue);
-        document.getElementById("output-txt").value = fullYear;
+        return document.getElementById("output-txt").value = fullYear;
     } 
     else if (inputValue >= 35 && inputValue < 100) { // 1900 year range logic
         yr = (Number(yr) - 1).toString(); // fetching the first 2 digits of the 1900s year
         fullYear = Number(yr + inputValue);
-        document.getElementById("output-txt").value = fullYear;
+        return document.getElementById("output-txt").value = fullYear;
     }
 }
 
-
-// Function to generate the array of multiples
+// Q3: Function to generate the array of multiples
 function generateArrayMultiples() {
-    var num = parseInt(document.getElementById("input-num").value);
-    var len = parseInt(document.getElementById("input-length").value);
-    var arrMultiply = [];
+    let num = parseInt(document.getElementById("input-num").value);
+    let len = parseInt(document.getElementById("input-length").value);
+    let arrMultiply = [];
 
     for (var i=1; i<=len; i++) {
-        var multiply = num * i;
+        // Multiplying the number with the array of numbers
+        let multiply = num * i;
+        // pushing the multiply value to the array
         arrMultiply.push(multiply);
     }
-    document.getElementById("output-txt").value = "[ "+ arrMultiply +" ]";
+    return document.getElementById("output-txt").value = "[ "+ arrMultiply +" ]";
+}
+
+// Q5: Function to find the nearest vowel to the letter
+function nearestVowel () {
+    let letter = document.getElementById("input-txt").value;
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    let letterChar = letter.charCodeAt(0);
+    let lengthDiff = "";
+    let charArray = [];
+    let minValueIndex = '';
+
+    for (i in vowels) {
+        // Identifying the length difference between the letter and the vowels
+        // using charCodeAt to get the Unicode value of the letter
+        lengthDiff = Math.abs(letterChar - vowels[i].charCodeAt(0));
+        // pushing the length difference of the letter with respect to each vowel to an array
+        charArray.push(lengthDiff);
+    }
+    // Using Math.min to fetch the minimum value from the array and finding the Index of the minimum value.
+    minValueIndex = charArray.indexOf(Math.min(...charArray));
+    return document.getElementById("output-txt").value = vowels[minValueIndex];
 }

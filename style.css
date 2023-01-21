@@ -8,7 +8,7 @@ body {
   /* background-image: url('maths-image.jpg'); */
 }
 .table {
-  background: linear-gradient(to right, #be84c7, #a0c6e5);
+  background: linear-gradient(to right, #be84c7, #1c70b56c);
   border-radius: 5px;
   box-shadow: 0 0.5rem 1rem rgba(7, 58, 94, 0.943);
 }
@@ -35,7 +35,14 @@ body {
   height: 2px;
   border-width: 0;
 }
+button:hover {
+  box-shadow: 0 0.5rem 1rem rgba(7, 58, 94, 0.943);
+}
+input:hover {  
+  box-shadow: 0 0.5rem 1rem rgba(7, 58, 94, 0.943);
+}
 #input-txt {
+  border-color: rgba(217, 13, 13, 0.943);
   border-radius: 5px;
   width: 45%;
   height: 50px;
@@ -43,6 +50,7 @@ body {
   font-size: 24px;
 }
 #input-num {
+  border-color: rgba(217, 13, 13, 0.943);
   border-radius: 5px;
   width: 20%;
   height: 50px;
@@ -50,6 +58,7 @@ body {
   font-size: 24px;
 }
 #input-length {
+  border-color: rgba(217, 13, 13, 0.943);
   border-radius: 5px;
   width: 20%;
   height: 50px;
@@ -60,6 +69,7 @@ body {
   padding: 9px;
 }
 #output-txt {
+  border-color: rgba(217, 13, 13, 0.943);
   border-radius: 5px;
   width: 96%;
   height: 50px;
