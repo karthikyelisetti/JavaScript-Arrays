@@ -3,8 +3,12 @@
   padding: 0;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
+body {
+  background: linear-gradient(to right, rgba(71, 223, 175, 0.459), rgb(29, 113, 161));
+  /* background-image: url('maths-image.jpg'); */
+}
 .table {
-  background: linear-gradient(to right, #9648a475, #8ecdff);
+  background: linear-gradient(to right, #debfe3, #8dbde3);
   border-radius: 5px;
   box-shadow: 0 0.5rem 1rem rgba(7, 58, 94, 0.943);
 }
@@ -13,7 +17,7 @@
   border: 1px;
 }
 .main {
-  max-width: 660px;
+  max-width: 720px;
   margin: auto;
 }
 .heading {
@@ -57,7 +61,7 @@
 }
 #output-txt {
   border-radius: 5px;
-  width: 80%;
+  width: 96%;
   height: 50px;
   text-align: center;
   font-size: 30px;
