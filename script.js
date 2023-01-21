@@ -92,7 +92,7 @@ function longestSubSequence() {
 
 /*** Q5: Function to find the nearest vowel to the letter ***/
 function nearestVowel() {
-  let letter = document.getElementById("input-txt").value;
+  let letter = document.getElementById("input-txt").value.toLowerCase();
   let vowels = ["a", "e", "i", "o", "u"];
   let letterChar = letter.charCodeAt(0);
   let lengthDiff = "";
