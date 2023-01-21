@@ -41,15 +41,25 @@ function generateArrayMultiples() {
 
 /*** Q4: Find the length of the longest sub-sequence ***/
 function longestSubSequence() {
-    let arr = document.getElementById("input-txt").value;
-    console.log(arr.split(",").map(Number));
-    let arrLength = arr.length;
-    console.log(arrLength);
-    let sortedArray = arr.sort;
-    console.log(sortedArray);
-    for (var i=0; i<arrLength; i++) {
-        
+    let valArr = document.getElementById("input-txt").value;
+    let regex = /\(|\)|\[|\]|\{|\}/g; // regular expression to replace any brackets in the input.
+    let arrString = valArr.replace(regex, "");
+    let arr = arrString.split(",").map(Number); // spltting the string and mapping it to collection of elements.
+    arr.sort(function(a,b) {return a-b}); // sorting the array (arr)
+    let sortedArray = [];
+    let preVal=0, currVal=0;
+    // Using previous value and current value concept to identify the consecutive sequence.
+    for (var i=0; i<arr.length; i++) {
+        currVal = arr[i];
+        if (preVal == 0) {
+            sortedArray.push(currVal);
+            preVal = currVal;
+        }else if ((currVal - preVal) <= 1) {
+            sortedArray.push(currVal);
+            preVal = currVal;
+        }          
     }
+    return document.getElementById("output-txt").value = sortedArray.length;
 }
 
 
