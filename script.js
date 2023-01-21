@@ -62,6 +62,38 @@ function longestSubSequence() {
     return document.getElementById("output-txt").value = sortedArray.length;
 }
 
+/*** Q4a Depth of an Array ***/
+function getArrayDepth(ry){
+    // number of levels: how deep is the array
+    let levels = 1;
+    // previous length
+    let prev_length = 1;
+    // current length
+    let curr_length = ry.length;
+    //if the resulting array is longer than the previous one  add a new level
+    while(curr_length > prev_length){
+    ry = ry.flat();
+    prev_length = curr_length
+    curr_length = ry.length;
+    levels ++
+    }
+    return levels;
+  }
+function depthOfArray(){
+    let arr = document.getElementById("input-txt").value;
+    // defining the couter to count the depth
+    let counter = 1;
+    let prevLength = 1;
+    let currLength = arr.length;
+    while (currLength > prevLength) {
+        prevLength = currLength;
+        currLength = arr.length;
+        console.log(currLength);
+        counter += 1
+    }
+    console.log(counter);
+} 
+
 
 /*** Q5: Function to find the nearest vowel to the letter ***/
 function nearestVowel () {
