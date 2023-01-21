@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Depth of Array</title>
+    <title>Board Game - Possible Bonus</title>
     <link href="style.css" rel="stylesheet" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -23,19 +23,32 @@
       <table class="table">
         <tr>
           <th colspan="2">
-            <h1 class="heading">Depth of Array</h1>
+            <h1 class="heading">Board Game - Possible Bonus</h1>
             <hr class="divider-line" />
           </th>
         </tr>
         <tr>
           <td>
-            <p id="q4a">
-              <strong>Q4:</strong>Given an array, write a function to calculate its depth. Assume that a normal array has a depth of 1.  
+            <p id="q2">
+              <strong>Q2:</strong>In a board game, a piece may advance 1-6 tiles
+              forward depending on the number rolled on a six-sided dice. If you
+              advance your piece onto the same tile as another player's piece,
+              both of you earn a bonus. Can you reach your friend's tile number
+              in the next roll? Create a function that takes your position a and
+              your friend's position b and returns a boolean representation of
+              whether it's possible to earn a bonus on any dice roll.
             </p>
             <p id="eg">
-                <strong>Examples </strong> <br />
-                &nbsp;&nbsp;depth ([1, 2, 3, 4]) 1 <br />
-                &nbsp;&nbsp;depth ([1, [2, [3, 4]]]) 3 
+              <strong>Examples:</strong><br />
+              possibleBonus(3, 7) true <br />
+              possibleBonus(1, 9) false <br />
+              possibleBonus(5, 3) false
+            </p>
+            <p>
+              <strong>Notes: </strong>You cannot move backward (which is why
+              example #3 doesn't work). If you are already on the same tile,
+              return false, as you would be advancing away. Expect only positive
+              integer inputs.
             </p>
             <hr class="divider-line" />
           </td>
@@ -43,19 +56,22 @@
         <tr>
           <td>
             <div class="input-group justify-content-center">
-              <!-- <label id="label-right">Enter a number: </label>
-              <input type="text" id="input-num" /> -->
-              <label id="label-right">Enter an array of elements: </label>
-              <input type="text" id="input-txt" />
+              <label id="label-right">Enter Person-A position: </label>
+              <input type="text" id="input-num" />
+              <label id="label-right">Enter Person-B position: </label>
+              <input type="text" id="input-num1" />
             </div>
             <div class="d-grid gap-2 col-6 mx-auto">
-              <button class="btn btn-lg btn-primary" type="button" onclick="flatten()">
-                Calculate the Depth of Array
+              <button
+                class="btn btn-lg btn-primary"
+                type="button"
+                onclick="possibleBonus()"
+              >
+                Check if you earn a bonus
               </button>
             </div>
           </td>
         </tr>
-        
       </table>
       <table class="table">
         <tr>

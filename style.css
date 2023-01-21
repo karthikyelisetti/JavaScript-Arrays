@@ -57,6 +57,14 @@ input:hover {
   text-align: center;
   font-size: 24px;
 }
+#input-num1 {
+  border-color: rgba(217, 13, 13, 0.943);
+  border-radius: 5px;
+  width: 20%;
+  height: 50px;
+  text-align: center;
+  font-size: 24px;
+}
 #input-length {
   border-color: rgba(217, 13, 13, 0.943);
   border-radius: 5px;
