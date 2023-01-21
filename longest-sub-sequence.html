@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Array of Multiples</title>
+    <title>Longest Sub-Sequence</title>
     <link href="style.css" rel="stylesheet" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -23,24 +23,24 @@
       <table class="table">
         <tr>
           <th colspan="2">
-            <h1 class="heading">Array of Multiples</h1>
+            <h1 class="heading">Longest Sub-Sequence</h1>
             <hr class="divider-line" />
           </th>
         </tr>
         <tr>
           <td>
-            <p id="q3">
-              <strong>Q3:</strong>Create a function that takes two numbers as
-              arguments (num, length) and returns an array of multiples of num
-              until the array length reaches length.
+            <p id="q4">
+              <strong>Q4:</strong>Given an array of positive integers. Find the length of the longest sub-sequence such that elements in the subsequence are consecutive integers, the consecutive numbers can be in any order.
             </p>
             <p id="eg">
-              <strong>Example:</strong>arrayOfMultiples(12, 10) [12, 24, 36, 48,
-              60, 72, 84, 96, 108, 120]
+                <strong>Input:</strong><br />
+                &nbsp;&nbsp;N = 7 <br />
+                &nbsp;&nbsp;a[] = {2,6,1,9,4,5,3} <br />
+                <strong>Output:</strong> <br />
+                &nbsp;&nbsp;6
             </p>
             <p>
-              <strong>Notes: </strong>Notice that num is also included in the
-              returned array.
+                <strong>Explanation: </strong>The consecutive numbers here are 1, 2, 3, 4, 5, 6. These 6 numbers form the longest consecutive subsquence.
             </p>
             <hr class="divider-line" />
           </td>
@@ -48,22 +48,19 @@
         <tr>
           <td>
             <div class="input-group justify-content-center">
-              <label id="label-right">Enter a number: </label>
-              <input type="text" id="input-num" />
-              <label id="label-right">Enter the length: </label>
-              <input type="text" id="input-length" />
+              <!-- <label id="label-right">Enter a number: </label>
+              <input type="text" id="input-num" /> -->
+              <label id="label-right">Enter an array of elements: </label>
+              <input type="text" id="input-txt" />
             </div>
             <div class="d-grid gap-2 col-6 mx-auto">
-              <button
-                class="btn btn-lg btn-primary"
-                type="button"
-                onclick="generateArrayMultiples()"
-              >
-                Generate array of multiples
+              <button class="btn btn-lg btn-primary" type="button" onclick="longestSubSequence()">
+                Generate Longest Sub-Sequence
               </button>
             </div>
           </td>
         </tr>
+        
       </table>
       <table class="table">
         <tr>

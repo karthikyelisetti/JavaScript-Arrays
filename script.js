@@ -1,11 +1,11 @@
-// Q1: Function to calculate the year.
+/***  Q1: Function to calculate the year. ***/
 function calculateYear() {
     let inputValue = parseInt(document.getElementById("input-txt").value);
     let year = new Date().getFullYear();
     let yr = year.toString().substring(0, 2); // fetching the first 2 digits of the 2000s year
     let fullYear;
 
-    if (inputValue === '' || inputValue < 10 || isNaN(inputValue)) { // Checking for valid input value
+    if (inputValue === '' || inputValue < 10 || inputValue > 99 || isNaN(inputValue)) { // Checking for valid input value
         alert("Please enter a valid digit greater than or equal to 10 and less than 100.");
         document.getElementById("input-txt").value = '';
         document.getElementById("output-txt").value = '';
@@ -22,7 +22,8 @@ function calculateYear() {
     }
 }
 
-// Q3: Function to generate the array of multiples
+
+/*** Q3: Function to generate the array of multiples ***/
 function generateArrayMultiples() {
     let num = parseInt(document.getElementById("input-num").value);
     let len = parseInt(document.getElementById("input-length").value);
@@ -37,7 +38,22 @@ function generateArrayMultiples() {
     return document.getElementById("output-txt").value = "[ "+ arrMultiply +" ]";
 }
 
-// Q5: Function to find the nearest vowel to the letter
+
+/*** Q4: Find the length of the longest sub-sequence ***/
+function longestSubSequence() {
+    let arr = document.getElementById("input-txt").value;
+    console.log(arr.split(",").map(Number));
+    let arrLength = arr.length;
+    console.log(arrLength);
+    let sortedArray = arr.sort;
+    console.log(sortedArray);
+    for (var i=0; i<arrLength; i++) {
+        
+    }
+}
+
+
+/*** Q5: Function to find the nearest vowel to the letter ***/
 function nearestVowel () {
     let letter = document.getElementById("input-txt").value;
     let vowels = ['a', 'e', 'i', 'o', 'u'];
