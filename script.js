@@ -90,6 +90,20 @@ function longestSubSequence() {
 }
 
 
+/*** Q4a: Find the Depth of an Array ***/
+function depth() {
+  let depthArray = document.getElementById("input-txt").value;
+  var arr = depthArray.toString().split(',');
+  let depth = 0;
+  for (var i=0; i<arr.length; i++) {
+    if (arr[i].indexOf("[") > -1) {
+      depth += 1;
+    }
+  }
+  return (document.getElementById("output-txt").value = depth);
+}
+
+
 /*** Q5: Function to find the nearest vowel to the letter ***/
 function nearestVowel() {
   let letter = document.getElementById("input-txt").value.toLowerCase();
